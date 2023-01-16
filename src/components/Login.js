@@ -26,7 +26,7 @@ const Login = ( {setIsLoggedIn} ) => {
     <div className='welcome-div'>
        <hr></hr>
         <p>SignIn with Google to Continue</p>
-        <button className='googleLogin' onClick={LoginWithGoogle}><img src="./google.svg"></img>Signin with Google</button>
+        <button className='googleLogin' onClick={LoginWithGoogle}><img src="./google.svg" alt='Google'></img>Signin with Google</button>
     </div>
   )
 }

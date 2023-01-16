@@ -22,11 +22,18 @@ function App() {
      setRoom(null)
   }
 
+  const roomEntry = () => {
+    if(roomRef.current.value !== ""){
+    setRoom(roomRef.current.value.toUpperCase().trim())
+    }
+    else{
+      alert("Please Enter Room Name to Continue!")
+    }
+  }
+
   if (!isLoggedIn) {
     return (
       <>
-      
-
       <Main setIsLoggedIn={setIsLoggedIn} />
       </>
     )
@@ -42,7 +49,7 @@ function App() {
           <div className='main-chat-div'>
             <h1>Enter Room Name to Start Chatting</h1>
             <input className='input' id='roomInput' ref={roomRef} placeholder="Enter Room name here..."></input>
-            <button className='sendBtn' id='roomBtn' onClick={() => setRoom(roomRef.current.value)}>Enter Room</button>
+            <button className='sendBtn' id='roomBtn' onClick={roomEntry}>Enter Room</button>
           </div>
           </div>
       }

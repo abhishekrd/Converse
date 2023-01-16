@@ -240,14 +240,14 @@ body{
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    width: 95vw;
+    width: 90vw;
     margin: 0.5rem;
     padding: 2rem 1rem 2rem 1rem;
     border: 0.1rem solid #ff6e13;
     border-style: dashed;
   }
   .input{
-    width: 15rem;
+    width: 14rem;
     padding: 0.2rem 0.5rem;
   }
  
@@ -261,8 +261,16 @@ body{
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    width: 22rem;
+    width: 20rem;
   }
+
+  .chattxt{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: #ffec6d;
+    border-radius: 0.5rem 0.5rem 0.5rem;
+    font-size: 1rem;
+  }
+  
 
   #roomBtn{
     width: 60vw;
@@ -275,6 +283,6 @@ body{
     width: 10rem;
   }
   .sendBtn{
-    width: 21vw;
+    width: 20vw;
   }
 }
