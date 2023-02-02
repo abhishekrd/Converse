@@ -186,7 +186,9 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 90vh;
+  height: 100vh;
+  background-image: url("../public/back.jpg");
+  
   gap: 0.5rem;
 }
 .main-logo{
@@ -204,7 +206,20 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  bottom: 0;
  
+}
+.flexi{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#copy{
+  background-color:rgb(216, 216, 216);
+  color:#ff6e13;
+  width: 11vw;
 }
 
 @media  screen and (max-width:768px) {
@@ -234,6 +249,7 @@ body{
     align-items: center;
     gap: 0.5rem;
   }
+  
   .main-chat-div{
     display: flex;
     justify-content: left;
