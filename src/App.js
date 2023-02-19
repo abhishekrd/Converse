@@ -13,6 +13,8 @@ function App() {
   const token = cookie.get("refresh-token");
   const [isLoggedIn, setIsLoggedIn] = useState(token)
   const [room, setRoom] = useState(null)
+  const [verify, setVerify] = useState(false);
+
   const roomRef = useRef(null)
  
   const logoutHandler = async () => {
@@ -67,10 +69,12 @@ function App() {
         <div className='big-div'>
           <div className='main-chat-div'>
             <h1>Create/Enter Room Link to Start Chatting</h1>
+            <div className='flexi'>
             <input className='input' id='roomInput' ref={roomRef} value={room} placeholder="Enter Room Link here..."></input>
+            <button className='sendBtn' id='copy' onClick={() => linkGenerator(16)}><i class='bx bx-link-alt' style={{"color":"#ff6e13"}} ></i> Generate Link</button>
+              </div>
             {/* <button className='sendBtn' id='roomBtn' onClick={roomEntry}>Enter Room</button>*/}
             <div className='flexi'>
-            <button className='sendBtn' id='copy' onClick={() => linkGenerator(16)}><i class='bx bx-link-alt' style={{"color":"#ff6e13"}} ></i> Generate Link</button>
            { room !== null ? <button className='sendBtn' id='copy' onClick={copyText}> <i class='bx bxs-copy' style={{"color":"#ff6e13"}}  ></i> Copy Link</button> : <div></div>} 
              </div>
            <button className='sendBtn' id='roomBtn' onClick={roomEntry}><i class='bx bxs-arrow-to-right'></i> Enter Room</button>
