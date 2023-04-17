@@ -24,6 +24,10 @@ function App() {
      setRoom(null)
   }
 
+  const editRoom = (e) => {
+    setRoom(e.target.value)
+  }
+
   const linkGenerator = (length) => {
     const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
 
@@ -70,7 +74,7 @@ function App() {
           <div className='main-chat-div'>
             <h1>Create/Enter Room Link to Start Chatting</h1>
             <div className='flexi'>
-            <input className='input' id='roomInput' ref={roomRef} value={room} placeholder="Enter Room Link here..."></input>
+            <input className='input' id='roomInput' ref={roomRef} onChange={(e) => editRoom(e)} value={room} placeholder="Enter Room Link here..."></input>
             <button className='sendBtn' id='copy' onClick={() => linkGenerator(16)}><i class='bx bx-link-alt' style={{"color":"#ff6e13"}} ></i> Generate Link</button>
               </div>
             {/* <button className='sendBtn' id='roomBtn' onClick={roomEntry}>Enter Room</button>*/}
