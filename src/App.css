@@ -230,6 +230,9 @@ body{
     flex-direction: column;
     padding: 0 0.5rem 0 0.5rem;
   }
+  #copy{
+    width: 40vw;
+  }
   .main-logo{
     font-size: 4rem;
   }
@@ -256,7 +259,7 @@ body{
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    width: 90vw;
+    width: 97vw;
     margin: 0.5rem;
     padding: 2rem 1rem 2rem 1rem;
     border: 0.1rem solid #ff6e13;
@@ -293,6 +296,7 @@ body{
   }
   #roomInput{
     width: 18rem;
+    padding: 1rem 2rem 1rem 2rem;
   }
   .signout{
     margin: 1rem;
@@ -300,5 +304,12 @@ body{
   }
   .sendBtn{
     width: 20vw;
+  }
+
+  .flexi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
