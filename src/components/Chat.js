@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { addDoc, collection, onSnapshot, query, where, serverTimestamp, orderBy } from 'firebase/firestore';
 import { auth, db } from '../firebase-config';
 
-
 const Chat = ( {room} ) => {
 
   const [msg,setMsg] = useState("");
@@ -15,12 +14,15 @@ const Chat = ( {room} ) => {
     console.log(msg);
 
     if(msg === ""){return}
+    else{
+    
     await addDoc(collectionRef,{
       text:msg,
       createdAt:serverTimestamp(),
       createdBy:auth.currentUser.displayName,
       room:room
     })
+  }
 
     setMsg("")
   }
