@@ -72,10 +72,10 @@ function App() {
         room && confirm ? <Chat room={room}  />  :
         <div className='big-div'>
           <div className='main-chat-div'>
-            <h1>Create/Enter Room Link to Start Chatting</h1>
+            <h1>Create/Enter Room ID to Start Chatting</h1>
             <div className='flexi'>
-            <input className='input' id='roomInput' ref={roomRef} onChange={(e) => editRoom(e)} value={room} placeholder="Enter Room Link here..."></input>
-            <button className='sendBtn' id='copy' onClick={() => linkGenerator(16)}><i class='bx bx-link-alt' style={{"color":"#ff6e13"}} ></i> Generate Link</button>
+            <input className='input' id='roomInput' ref={roomRef} onChange={(e) => editRoom(e)} value={room} placeholder="Enter Room ID here..."></input>
+            <button className='sendBtn' id='copy' onClick={() => linkGenerator(16)}><i class='bx bx-link-alt' style={{"color":"#ff6e13"}} ></i> Generate Room ID</button>
               </div>
             {/* <button className='sendBtn' id='roomBtn' onClick={roomEntry}>Enter Room</button>*/}
             <div className='flexi'>
